@@ -53,4 +53,10 @@ public class ProductService {
     public List<Product> searchProducts(String keyword) {
         return repository.findByNameContainingIgnoreCase(keyword);
     }
+
+
+    public List<Product> advancedSearch(String keyword, String category, Double minPrice, Double maxPrice) {
+        return repository.advancedSearch(keyword, category, minPrice, maxPrice);
+    }
+
 }
